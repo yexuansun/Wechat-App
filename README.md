@@ -9,6 +9,7 @@ The green channel app is made for Huidu Medical Technology Co., Ltd. to quickly 
 Install WeChat developer platform, download or clone all files. Import the project using the developer portal and select the cloned folder.
 Open to edit and use
 
+## function
 
 
 ## 介绍
@@ -17,3 +18,5 @@ Open to edit and use
 ## 使用
 安装微信开发者平台，下载或者克隆所有文件。使用开发者平台导入项目，选择克隆的文件夹。
 打开即可编辑并使用
+
+## 功能
