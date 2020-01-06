@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="logo">
+  <image src="../images/logo.png" mode="widthFix"></image>
+</view>
+<view class="turn" bindtap="tocaiyang">·采样说明</view>
+<view class="turn" bindtap="toaccess">·样本录入</view>
+<view class="turn" bindtap="tohistory">·历史记录</view>

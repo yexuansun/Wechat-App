@@ -1,0 +1,94 @@
+/* pages/form/form.wxss */
+.title {
+  text-align: center;
+  font-size: 250%;
+  color: skyblue;
+}
+
+.title1{
+  border-radius: 10px;
+  margin-top: 10px;
+  height: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.form {
+  margin-top: 2rem;
+}
+
+.form1 {
+  width: 50%;
+  margin-top: 2rem
+}
+
+.delivery1 {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+}
+
+.submit {
+  width: 70%;
+  background-color: skyblue;
+  color: white;
+  margin-top: 3rem;
+}
+
+.fi {
+  margin-top: 1rem;
+  margin-left: 8rem
+}
+
+.list-msg {
+    padding: 0 20rpx;
+    background-color: #fff;
+    position: relative;
+}
+ 
+.list-msg1 {
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ 
+.list-msg .list-msg2 {
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 0 10rpx;
+}
+ 
+.select_box {
+    background-color: #eee;
+    padding: 0 10rpx;
+    width: 93%;
+    position: absolute;
+    top: 130rpx;
+    z-index: 1;
+    overflow: hidden;
+    animation: myfirst 0.5s;
+}
+ 
+@keyframes myfirst {
+    from {
+        height: 0rpx;
+    }
+ 
+    to {
+        height: 210rpx;
+    }
+}
+ 
+.select_one {
+    height: 60rpx;
+    line-height: 60rpx;
+    border-bottom: 1px solid #ccc;
+}

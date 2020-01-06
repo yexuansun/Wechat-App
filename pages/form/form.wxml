@@ -1,0 +1,49 @@
+<!--pages/form/form.wxml-->
+<view class="title">慧渡收样流程</view>
+<scroll-view>
+  <form>
+    <view class="form" bindsubmit="formsubmit">
+      <view style="background:skyblue; color:white;height:50px;" class="title1">
+        样本申请单
+      </view>
+        <button class="form1" bindtap="form1">填写样本申请单</button>
+        <view class="fi">
+          <checkbox checked="{{check1}}">是否填写完成</checkbox>
+        </view>
+    </view>
+    <view class="form">
+      <view style="background:skyblue; color:white;height:50px;" class="title1">
+        知情同意书
+      </view>
+      <button class="form1" bindtap="form2">填写知情同意书</button>
+      <view class="fi">
+          <checkbox checked="{{check2}}">是否填写完成</checkbox>
+        </view>
+    </view>
+    <view class="form">
+      <view style="background:skyblue; color:white;height:50px;" class="title1">
+        快递单号
+      </view>
+      <view class='list-msg'>
+<!--下拉框  -->
+    <view class='list-msg2' bindtap='bindShowMsg'>
+        <text>{{tihuoWay}}</text>
+        <image style='height:20rpx;width:20rpx;' src='../images/1070137.png'></image>
+    </view>
+<!-- 下拉需要显示的列表 -->
+    <view class="select_box" wx:if="{{select}}">
+        <view class="select_one" bindtap="mySelect" data-name="顺丰">顺丰</view>
+        <view class="select_one" bindtap="mySelect" data-name="圆通">圆通</view>
+        <view class="select_one" bindtap="mySelect" data-name="中通">中通</view>
+        <view class="select_one" bindtap="mySelect" data-name="百世汇通">百世汇通</view>
+    </view>
+</view>
+      <view class="delivery1">
+        <text decode="{{true}}">&nbsp;&nbsp;&nbsp;快递单号:</text>
+        <input class="danhao" bindinput="danhao" placeholder="请填写单号或扫码" value="{{danhao}}"></input>
+        <button type="primary" bindtap="scancode" id="scan">扫条码</button>
+      </view>
+    </view>
+    <button class="submit" bindtap="tijiao">提交</button>
+  </form>
+</scroll-view>

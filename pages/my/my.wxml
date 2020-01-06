@@ -1,0 +1,48 @@
+,<!--pages/my/my.wxml-->
+<view class="title">
+  <text>历史提交记录</text>
+</view>
+
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">申请单号</view>
+    <view class="th">提交时间</view>
+    <view class="th ">申请单详情</view>
+    <view class="th">报告查看</view>
+  </view>
+  <block wx:for="{{formdata}}" >
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.barcode}}</view>
+      <view class="td">{{item.timestamp}}</view>
+      <view class="td">
+        <radio-group bindchange="click_here">
+          <radio value="{{item.barcode}}">查看</radio>
+        </radio-group>
+      </view>
+      <view class="td">
+        <radio-group bindchange="click_here1">
+          <radio value="{{item.report}}">
+            <view wx:if="{{item.report}}">查看报告</view>
+            <view wx:else>检测中</view>
+          </radio>
+        </radio-group>
+      </view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.barcode}}</view>
+      <view class="td">{{item.timestamp}}</view>
+      <view class="td">
+        <radio-group bindchange="click_here">
+          <radio value="{{item.report}}">查看</radio>
+        </radio-group>
+      </view>
+      <view class="td">
+        <radio value="{{item.barcode}}" bindchange="click_here1">
+            <view wx:if="{{item.report}}">查看报告</view>
+            <view wx:else>检测中</view>
+          </radio>
+      </view>
+    </view>
+  </block>
+</view>
+     

@@ -1,0 +1,24 @@
+<!--pages/login/login.wxml-->
+<view class="login">
+  <view class="userhead">
+    <image class="user-icon" src="../images/logo.png"></image>
+  </view>
+  <scroll-view>
+    <form bindsubmit="loginUser">
+      <view class="useritemView">
+        <text class="usertext">用 户：</text>
+        <input class="userinput" placeholder="请输入用户名" type="text" bindinput="userNameInput" value="{{userName}}" />
+      </view>
+      <view class="useritemView">
+        <text class="usertext">密 码：</text>
+        <input class="userinput" password placeholder="请输入密码" bindinput="passWdInput" value="{{passWd}}" />
+      </view>
+      <view class="viewName" style="background-color:#fbf9fe">
+        <button class="loginBtn" bindtap="loginBtnClick">登录</button>
+      </view>
+    </form>
+  </scroll-view>
+</view>
+<view class='version'>
+<text class='version-1'>{{version}}</text>
+</view>

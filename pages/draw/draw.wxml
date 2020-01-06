@@ -1,0 +1,11 @@
+<!--pages/draw/draw.wxml-->
+
+<view class="container">
+  <view>签名板（请在下方区域手写内容）</view> 
+  <canvas style="width: {{canvasw}}px; height: {{canvash}}px" class="canvas" id="canvas" canvas-id="canvas" disable-scroll="true" bindtouchstart="canvasStart" bindtouchmove="canvasMove" bindtouchend="canvasEnd" touchcancel="canvasEnd" binderror="canvasIdErrorCallback">
+  </canvas>
+</view>
+<view class='btns canvaspd'>
+  <button bindtap="cleardraw">清除</button>
+  <button bindtap="setSign">提交</button>
+</view>

@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/form2/form2",
+    "pages/form1/form1",
+    "pages/caiyang/caiyang",
+    
+    "pages/draw/draw",
+    
+    "pages/index/index",
+    "pages/form/form",
+    "pages/logs/logs",  
+    "pages/my/my",
+    
+    "pages/detail/detail"
+    
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "慧渡样本采集系统",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar":{
+    "color":"#000000",
+    "selectedColor":"#ff7f50",
+    "backgroundColor": "#ffffff",
+    "list":[
+      {
+        "pagePath":"pages/index/index",
+        "text":"首页",
+        "iconPath":"pages/images/home.png",
+        "selectedIconPath":"pages/images/home.png"
+      },
+      {
+        "pagePath": "pages/form/form",
+        "text": "录入",
+        "iconPath": "pages/images/录入.png",
+        "selectedIconPath": "pages/images/录入.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath":"pages/images/my.png",
+        "selectedIconPath":"pages/images/my.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "networkTimeout":{
+    "request":60000,
+    "connectSocket":60000
+  },
+  "debug":true
+
+}

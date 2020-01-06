@@ -1,0 +1,80 @@
+<!--pages/form2/form2.wxml-->
+<view class="title">基因检测知情同意书</view>
+
+<scroll-view>
+  <form bindsubmit="formsubmit">
+    <view class="patient_info">
+      <view class="info1">
+        <text decode="{{true}}">&nbsp;&nbsp;&nbsp;患者姓名:</text>
+        <input bindinput="name" value="{{name2}}"></input>
+      </view>
+      <view class="divLine"></view>
+      <view class="info1">
+        <text decode="{{true}}">&nbsp;&nbsp;&nbsp;身份证号:</text>
+        <input bindinput="idcard" value="{{idcard2}}"></input>
+      </view>
+      <view class="divLine"></view>
+      <view class="info1">
+        <text decode="{{true}}">&nbsp;&nbsp;&nbsp;性别:</text>
+        <input bindinput="male2" value="{{male2}}"></input>
+      </view>
+      <view class="divLine"></view>
+      <view class="info1">
+        <text decode="{{true}}">&nbsp;&nbsp;&nbsp;联系方式:</text>
+        <input bindinput="phone" value="{{phone2}}"></input>
+      </view>
+      <view class="divLine"></view>
+    </view>
+    <view class="doc">
+      <text >尊敬的客户，您好！
+    谢谢您选择慧渡（上海）医疗科技有限公司（简称“慧渡医疗”）做基因检测。在填写检测申请单前，请仔细阅读本知情同意书。本书描述了基因检测可能存在的风险和收益，若您对内容有任何疑问，请咨询您的主治医生。
+          基因检测是指从血液、肿瘤组织、尿液或其他类型样本中提取DNA或RNA,通过二代高通量测序(NGS)技术进行测序、生物信息学分析、结果验证等-系列步骤，以检测与受检者疾病或健康状态相关的基因变异，用于疾病风险评估、早期诊断、早期干预、靶向治疗。疗效监测及遗传咨询等。
+
+1.检测收费涉及基因检测、检则结果分析以及检测报告三部分。检测样本满足下列要求后，方可进行检测:(1)受检者已签署知情同意书:(2)受检者已按要求填写好检测申请书:(3)所采集的样本符合公司的送样标准。
+
+2.慧渡医疗在收到检测申请书、知情同意书和样本后，即进行基因检测。若您因某种原因中途取消测试，则视样本处理情况至少需付测试总费用的25%。
+
+3.由于受检者个体差异或样本不符合要求，可能造成检测失败。慧渡医疗保留要求受检者再次提供合格样本的权利，但不重复收取检测费用，报告时间顺延。受检者不配合重新取样的，检测方不予退还已经收取的检测费。
+
+4.受检样本的检则结果是为了说明检则基因的变异情况，如未检出特定基因的基因变异情况(即阴性结果)并不能排除其他未知基因上或没检测的基因上的变异情况，也不能排除患某种疾病的可能性。
+
+5.鉴于当前医学检测技术水平的限制和受检者个体差异等不同原因，即使在检测人员已经履行了工作职责和操作程序的前提下，仍有可能出现假阳性或假阴性。
+
+6.如果受检者前期接受过异体输血，移植手术，干细胞治疗等，会引入外源DNA/RNA,也会影响检测结果。
+
+7.本检测方法不适于检测染色体数目及结构异常、基因非编码区域突变及其他特殊类型基因突变。
+
+8.本检测仅对送检样本负责，对样本的真实性(即样本是否属于受检者本人)不负责，检测结果仅供参考，不代表临床意见，需由临床医生提供临床处理及治疗方案，
+
+9.检测剩余样本在客户没有特殊要求的情况下，將由慧渡医疗自行规范处理。
+
+10.慧渡医疗在规定的时间内发送报告。当样本运输延误或检测以外的不可控因素发生时，报告延迟发送，慧渡医疗不担相关责任。
+11.本人允许慧渡将检测数据用于新药临床试验的匹配和推荐筛选入组，或者进一步用于科学研究，并且自愿定期接受慧渡医疗的疾病随访。如疾病复发/进展可获得一次免费检测机会。
+
+12.慧渡医疗不负责测试后产生的心理上、法律上及应用方面的任何后果。
+
+13.基因信息属于个人隐私，您的个人信息及检测结果将得到严格保密，慧渡医疗只对“送样者”发送报告。
+      </text>
+    </view>
+
+    <view class="doc">
+      <text>本人已仔细阅读以上各条款的陈述内容，已被告知并充分了解该检测的性质、预期目的、局限性和风险性，对其中疑问已得到解答。本人对上述内容均认可，慧渡医疗已履行了告知义务，本人已享有充分的知情权和选择权。
+      </text>
+    </view>
+
+    <view class="sign">
+      <view>受检人/监护人签名:</view>
+      <view class="sign1">
+        <button bindtap='sign1'>进入签名面板</button>
+      </view>
+      <image src="{{imgID}}"></image>
+    </view>
+
+    <view style="background-color:#fbf9fe" class="submit">
+      <button bindtap="tijiao" class="submit1">完成</button>
+      <button bindtap="fanhui" class="submit1">返回</button>
+    </view>
+
+  </form>
+</scroll-view>
+

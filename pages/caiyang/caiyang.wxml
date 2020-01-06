@@ -1,0 +1,82 @@
+<!--pages/caiyang/caiyang.wxml-->
+<view class="caiyang">
+  <view class="title">
+    <text>肿瘤基因样本采集说明</text>
+  </view>
+</view>
+
+<view class="table">
+  <view class="tr">
+    <view class="td">样本类型</view>
+    <view class="td">样本要求</view>
+  </view>
+  <view class="tr1">
+    <view class="td">血液样本</view>
+    <view class="td">
+      <text>1.使用专用采血管抽取10ml外周血
+            2.采血后上下轻缓颠倒摇匀10次以上
+      </text>
+    </view>
+  </view>
+  <view class="tr1">
+    <view class="td">石蜡切片/蜡块</view>
+    <view class="td">
+      <text>1.白片厚度建议3-5µm，表面积大于25mm²，数量11-20片（1片用于HE染色，判断肿瘤组织质量和含量）
+            2.送检蜡块建议为一年内制作保存的
+            3.取材时尽量选取肿瘤组织多区域，避开坏死组织
+      </text>
+    </view>
+  </view>
+  <view class="tr2">
+    <view class="td">新鲜手术组织</view>
+    <view class="td">
+      <text>1.手术组织大小：建议5*5*3mm³及以上
+            2.	穿刺活检样本大小：建议直径≥1mm，长度≥10mm，2条或以上
+            3.	取材时尽量选取肿瘤组织多的区域，避开坏死组织
+            4.  组织离体后尽快置于有组织保存液的样本管中
+      </text>
+    </view>
+  </view>
+  <view class="tr1">
+    <view class="td">体液</view>
+    <view class="td">
+      <text>1.	胸腹水、脑脊液等样本使用专用采样管采集20ml
+            2.  尿液使用专用采样盒采集40ml（取当天晨尿，采集前一天晚21:00后勿饮水）
+      </text>
+    </view>
+  </view>
+</view>
+
+<view class="divLine"></view>
+<view class="title1">运送条件</view>
+<view class="text">
+  <text>样本封装在样本盒中常温(6-30℃)寄送，可保存7天</text>
+</view>
+
+<view class="divLine"></view>
+<view class="title1">注意事项</view>
+<view class="text">
+  <text>1.样本送样前需完整填写和提交慧渡医疗样本收录系统中的基因检测申请单和知情同意书。
+        2.如遇高温天气，样本的保存及运输需要使用冰袋降温，反之低温天气则使用发热包保温。
+  </text>
+</view>
+
+<view class="divLine"></view>
+<view class="title1">送检方法</view>
+<view class="text">
+  <text>送检样本采用适当方法保存并妥善包装后邮寄到我司。
+通过顺丰速运(客服专线95338，微信公众号顺丰速运)安排取样，血液样本务必当日寄往慧渡(上海)医疗科技有限公司。
+
+收样地址：中国上海市奉贤区望园路1698弄11号楼
+收件人:标本接收部15221472714
+  </text>
+</view>
+
+<view class="divLine"></view>
+<view class="title1">联系方式</view>
+<view class="text">
+  <text>如遇到相关问题，可向客服部咨询或发邮件交流。
+  客服电话021-67180693
+  电子邮箱地址support.cn@huidumed.com
+  </text>
+</view>

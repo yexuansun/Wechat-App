@@ -1,0 +1,25 @@
+<!--pages/detail/detail.wxml-->
+<view class="title">
+  <text>样本ID:{{formdata.barcode}}</text>
+</view>
+
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">条目</view>
+    <view class="th">内容</view>
+  </view>
+  <block wx:for="{{formdata}}" wx:for-index="key" wx:for-item="value">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{key}}</view>
+      <view class="td">{{value}}</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{key}}</view>
+      <view class="td">{{value}}</view>
+    </view>
+  </block>
+</view>
+
+<view style="background-color:#fbf9fe" class="submit">
+  <button bindtap="fanhui" class="submit1">返回</button>
+</view>

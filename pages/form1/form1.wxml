@@ -1,0 +1,311 @@
+<!--pages/form1/form1.wxml-->
+<view class="title">样本申请单</view>
+
+<scroll-view>
+  <form bindsubmit="formsubmit">
+    <view style="background:skyblue; color:white;height:50px;" class="title1">
+      患者信息
+    </view>
+      <view class='info'>
+          <text decode="{{true}}">&nbsp;&nbsp;&nbsp;*受检人姓名:</text>
+          <input class="laiyuan" bindinput="info1"  placeholder="" value="{{name}}"/>
+      </view>
+      <view class="divLine"></view>
+      <view class='info'>
+          <text decode="{{true}}">&nbsp;&nbsp;&nbsp;*性别:</text>
+          <input class="laiyuan" bindinput="info2" placeholder="" value="{{male}}"/>
+      </view>
+      <view class="divLine"></view>
+      <view class='info'>
+          <text decode="{{true}}">&nbsp;&nbsp;&nbsp;*患者病例号:</text>
+          <input class="laiyuan" bindinput="info3"  placeholder=""
+          value="{{bianhao}}"/>
+      </view>
+      <view class="divLine"></view>
+      <view class='info'>
+        <text decode="{{true}}">&nbsp;&nbsp;&nbsp;*报告接收人:</text>
+        <input class="laiyuan" bindinput="info5"  placeholder="" value="{{receiver}}"/>
+      </view>
+      <view class="divLine"></view>
+      <view class='info'>
+        <text decode="{{true}}">&nbsp;&nbsp;&nbsp;*报告接收邮箱:</text>
+        <input class="laiyuan" bindinput="info6" placeholder="" value="{{receive_mail}}"/>
+      </view>
+      <view class="divLine"></view>
+      <view class='info'>
+        <text decode="{{true}}">&nbsp;&nbsp;&nbsp;*采样日期:</text>
+        <input class="laiyuan1" bindinput="info7_year" value="{{receive_date_year}}"/>
+        <text decode="{{true}}">年</text>
+        <input class="laiyuan1" bindinput="info7_month" value="{{receive_date_month}}"/>
+        <text decode="{{true}}">月</text>
+        <input class="laiyuan1" bindinput="info7_day" value="{{receive_date_day}}"/>
+        <text decode="{{true}}">日</text>
+      </view>
+      <view class="divLine"></view>
+      <view class='info'>
+        <text decode="{{true}}">&nbsp;&nbsp;&nbsp;*电话:</text>
+        <input class="laiyuan" bindinput="info13"  placeholder="" value="{{phone}}"/>
+      </view>
+      <view class="divLine"></view>
+      <view class='info'>
+        <text decode="{{true}}">&nbsp;&nbsp;&nbsp;*身份证号码:</text>
+        <input class="laiyuan" bindinput="info9" placeholder="" value="{{idcard}}"/>
+      </view>
+      <view class="divLine"></view>
+      <view class='info'>
+        <text decode="{{true}}">&nbsp;&nbsp;&nbsp;*送检医生:</text>
+        <input class="laiyuan" bindinput="info12" placeholder="" value="{{doctor}}"/>
+      </view>
+      <view class="divLine"></view>
+      <view class='info'>
+        <text decode="{{true}}">&nbsp;&nbsp;&nbsp;年龄:</text>
+        <input class="laiyuan" bindinput="info8" placeholder="" value="{{age}}"/>
+      </view>
+      <view class="divLine"></view>
+      <view class='info'>
+        <text decode="{{true}}">&nbsp;&nbsp;&nbsp;地址:</text>
+        <input class="laiyuan" bindinput="info10" placeholder="" value="{{address}}"/>
+      </view>
+      <view class="divLine"></view>
+      <view class='info'>
+        <text decode="{{true}}">&nbsp;&nbsp;&nbsp;送检单位:</text>
+        <input class="laiyuan" bindinput="info11"  placeholder="" value="{{company}}"/>
+      </view>
+      <view class="divLine"></view>
+
+
+
+    <view style="background:skyblue; color:white;height:50px;" class="title1">
+      样本信息
+    </view>
+    <view class='list-msg'>
+      <view>*疾病种类:</view>
+      <view class='list-msg2' bindtap='bindShowMsg'>
+        <text>{{tihuoWay}}</text>
+        <image style='height:20rpx;width:20rpx;' src='../images/1070137.png'></image>
+      </view>
+      <view class="select_box" wx:if="{{select}}">
+        <view class="select_one" bindtap="mySelect" data-name="非小细胞肺癌">非小细胞肺癌</view>
+        <view class="select_one" bindtap="mySelect" data-name="肝癌">肝癌</view>
+        <view class="select_one" bindtap="mySelect" data-name="结直肠癌">结直肠癌</view>
+        <view class="select_one" bindtap="mySelect" data-name="卵巢癌">卵巢癌</view>
+        <view class="select_one" bindtap="mySelect" data-name="膀胱癌">膀胱癌</view>
+        <view class="select_one" bindtap="mySelect" data-name="前列腺癌">前列腺癌</view>
+        <view class="select_one" bindtap="mySelect" data-name="乳腺癌">乳腺癌</view>
+        <view class="select_one" bindtap="mySelect" data-name="肾癌">肾癌</view>
+        <view class="select_one" bindtap="mySelect" data-name="胃癌">胃癌</view>
+        <view class="select_one" bindtap="mySelect" data-name="小细胞肺癌">小细胞肺癌</view>
+        <view class="select_one" bindtap="mySelect" data-name="胰腺癌">胰腺癌</view>
+        <view class="select_one" bindtap="mySelect" data-name="其他">其他</view>
+      </view>
+    </view>
+    <view class="disease">
+      <text decode="{{true}}">&nbsp;&nbsp;&nbsp;其他疾病类型:</text>
+      <input bindinput="info21" placeholder="" value="{{type21_other}}"/>
+    </view>
+    <view class="divLine"></view>
+    <view class="binli">
+      <view class='info'>
+        <text decode="{{true}}">&nbsp;&nbsp;&nbsp;病理诊断:</text>
+        <input class="laiyuan" bindinput="info22" placeholder="" value="{{type22}}"/>
+      </view>
+      <view class="divLine"></view>
+      <view class='info'>
+        <text decode="{{true}}">&nbsp;&nbsp;&nbsp;诊断时间:</text>
+        <input class="laiyuan" bindinput="info23"  placeholder="" value="{{type23}}"/>
+      </view>
+      <view class="divLine"></view>
+        <view class="fenqi">
+          <text class="linchuangfenqi" decode="{{true}}">&nbsp;&nbsp;&nbsp;临床分期:</text>
+          <radio-group class='radio-group-fenqi' bindchange='radioChange1'>
+            <label class="radio" wx:for="{{fenqi}}">
+              <text decode="ture">&nbsp;&nbsp;</text>
+              <radio value="{{item.name}}" checked="{{item.checked}}">{{item.value}}
+              </radio>
+              <view>\n</view>
+            </label>
+          </radio-group>
+        </view>
+      </view>
+
+      <view class="divLine"></view>
+      <view class="zhiliao">
+        <text class="linchuangfenqi" decode="{{true}}">&nbsp;&nbsp;&nbsp;既往治疗史:</text>
+        <checkbox-group bindchange="chkchange" class="checkboxgroup">
+          <text decode="{{true}}">&nbsp;&nbsp;&nbsp;</text>
+          <label class="checkbox_1">
+            <checkbox value="手术">
+              <text>手术:</text>
+            </checkbox>
+            <text decode="{{true}}">&nbsp;&nbsp;&nbsp;</text>
+            <input class="time"  bindinput="time1"  placeholder=""/>
+          </label>
+          <label class="checkbox_1">
+            <checkbox value="放疗">
+              <text>放疗:</text>
+            </checkbox>
+            <text decode="{{true}}">&nbsp;&nbsp;&nbsp;</text>
+            <input class="time" bindinput="time2"  placeholder=""/>
+          </label>
+          <label class="checkbox_1">
+            <checkbox value="化疗">
+              <text>化疗:</text>
+            </checkbox>
+            <text decode="{{true}}">&nbsp;&nbsp;&nbsp;</text>
+            <input class="time" bindinput="time3"  placeholder=""/>
+          </label>
+          <label class="checkbox_1">
+            <checkbox value='靶向'>
+              <text>靶向:</text>
+            </checkbox>
+            <text decode="{{true}}">&nbsp;&nbsp;&nbsp;</text>
+            <input class="time" bindinput="time4"  placeholder=""/>
+          </label>
+        </checkbox-group>   
+      </view>
+
+      <view class="divLine"></view>
+      <view class='jianceshi'>
+        <text decode="{{true}}"> &nbsp;&nbsp;&nbsp;基因检测史:</text>
+        <radio-group class='radio-group' bindchange='radioChange2'>
+          <text decode="{{true}}"> &nbsp;&nbsp;&nbsp;是否做过基因检测:</text>
+          <label class="radio">
+            <radio value='是'/>是
+          </label>
+          <label class="radio">
+            <radio value='否'/>否
+          </label>
+          <view class="jiancexiangmu">
+            <text decode="{{true}}"> &nbsp;&nbsp;&nbsp;</text>
+            <input class="time" decode='{{true}}' bindinput="info27" placeholder="检测项目及结果"/>
+          </view>
+        </radio-group>
+      </view>
+
+      <view class="divLine"></view>
+      <view class="biaobenleixing">
+        <text decode="{{true}}">&nbsp;&nbsp;&nbsp;*标本类型:</text>
+        <checkbox-group bindchange="chkchange1" class="checkboxgroup1">
+          <text decode="{{true}}">&nbsp;&nbsp;&nbsp;</text>
+          <view class="checkboxgroup_1">
+            <label class="checkbox">
+              <checkbox value="外周血">外周血
+              <input class="time" bindinput="info281"  placeholder="毫升"/>
+              </checkbox>
+            </label>
+            <label class="checkbox">
+              <checkbox value="血浆">血浆
+              <input class="time" bindinput="info282" placeholder="毫升"/>
+              </checkbox>
+            </label>
+            <label class="checkbox">
+              <checkbox value="尿液">尿液
+              <input class="time" bindinput="info283"  placeholder="毫升"/>
+              </checkbox>
+            </label>
+            <label class="checkbox">
+              <checkbox value="胸水">胸水
+              <input class="time" bindinput="info284"  placeholder="毫升"/>
+              </checkbox>
+            </label>
+          </view>
+          <view class="checkboxgroup_2">
+            <label class="checkbox">
+              <checkbox value="新鲜穿刺组织">新鲜穿刺组织
+              <input class="time" bindinput="info285" placeholder="条"/>
+              </checkbox>
+            </label>
+            <label class="checkbox">
+              <checkbox value="新鲜手术组织">新鲜手术组织
+              <input class="time" bindinput="info286"  placeholder="块"/>
+              </checkbox>
+            </label>
+            <label class="checkbox">
+              <checkbox value="组织石蜡白片">组织石蜡白片
+              <input class="time" bindinput="info287"  placeholder="张"/>
+              </checkbox>
+            </label>
+          </view>
+        </checkbox-group>
+      </view>
+      <view class="divLine"></view>
+      <view class="zuzhilaiyuan">
+        <view class='zuzhileixing'>
+          <text decode="{{true}}">&nbsp;&nbsp;&nbsp;组织来源:</text>
+          <input class="laiyuan" bindinput="info30"  placeholder="在此填写组织来源"/>
+        </view>
+        <radio-group class='radio-group' bindchange='radioChange3'>
+          <label class="radio">
+            <text decode="{{true}}">&nbsp;&nbsp;&nbsp;</text>
+            <radio value='原发灶'/>原发灶
+          </label>
+          <label class="radio">
+            <radio value='淋巴结转移'/>淋巴结转移
+          </label>
+          <label class="radio">
+            <radio value='远处转移'/>远处转移
+          </label>
+        </radio-group>
+      </view>
+
+    <view style="background:skyblue; color:white;height:50px;" class="title1">
+      检测项目
+    </view>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio" wx:for="{{items}}">
+        <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+        <view>\n</view>
+      </label>
+    </radio-group>
+    <view class="divLine"></view>
+    <view class="info_money">
+      <text decode="{{true}}">&nbsp;&nbsp;&nbsp;实收金额:</text>
+      <view class="info">
+        <input class="laiyuan1" bindinput="money1" value="{{money1}}"/>
+        <text decode="{{true}}">万</text>
+        <input class="laiyuan1" bindinput="money2" value="{{money2}}"/>
+        <text decode="{{true}}">千</text>
+        <input class="laiyuan1" bindinput="money3" value="{{money3}}"/>
+        <text decode="{{true}}">百</text>
+        <input class="laiyuan1" bindinput="money4" value="{{money4}}"/>
+        <text decode="{{true}}">十</text>
+        <input class="laiyuan1" bindinput="money5" value="{{money5}}"/>
+        <text decode="{{true}}">元</text>
+        <input></input>
+      </view>
+    </view>
+
+
+    <view class="scancode">
+      <view style="background:skyblue; color:white;height:50px;" class="title1">
+      申请单条码
+      </view>
+      <view class= "scan">
+        <text decode="{{true}}">&nbsp;&nbsp;&nbsp;*申请单条码:</text>
+        <input class="time" bindinput="barcode1"  placeholder="请在此输入申请单条码" value="{{barcode}}"></input>
+      </view>
+      <button type="primary" bindtap="scancode" id="scan">扫条码</button>
+    </view>
+
+    <view class="beizhu">
+      <view style="background:skyblue; color:white;height:50px;" class="title1">
+      备注
+      </view>
+      <input class="time" bindinput="info32" placeholder="请在此填写备注" value="{{type32}}"></input>
+    </view>
+
+    <view class="beizhu">
+      <view style="background:skyblue; color:white;height:50px;" class="title1">
+      病历上传
+      </view>
+      <view class="load-image1">
+      <image bindtap="loadimage" class="load-image" src="{{imgsrc}}" name="shenqingdan" mode="widthFix"></image>
+      </view>
+    </view>
+    
+    <view style="background-color:#fbf9fe" class="submit">
+      <button bindtap="tijiao" class="submit1">完成</button>
+      <button bindtap="fanhui" class="submit1">返回</button>
+    </view>
+  </form>
+</scroll-view>
